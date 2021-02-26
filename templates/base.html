@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,16 +14,26 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Lightbox -->
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
-    <title>BT Real Estate</title>
+    <title>Rwanda Real Estate</title>
 </head>
 <body>
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+
+
     {% block content %} {% endblock %}
 
 
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
 
 
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/js/lightbox.min.js' %}"></script>
     <script src="{% static '/js/main.js' %}"></script>
     
 </body>
