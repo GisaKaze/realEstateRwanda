@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Browse Our Properties</h1>
+          <h1 class="display-4">Browse Our Properties {{ context}}</h1>
           <p class="lead">
             We are passionate about creating an incredible client experience and determined to get you the very best results!
           </p>
@@ -33,7 +33,56 @@
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
-
+        {% if listings %}
+          {% for listing in listings %}
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card listing-preview">
+              <img class="card-img-top" src="../../static/img/building.jpg" alt="">
+                <div class="card-img-overlay">
+                  <h2>
+                    <span class="badge badge-secondary text-white">4,900,000 Frw</span>
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <div class="listing-heading text-center">
+                    <h4 class="text-primary">45 Niboye Launch</h4>
+                    <p>
+                      <i class="fas fa-map-marker text-secondary"></i> Kicukiro KA, 02062</p>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-th-large"></i> Sqft: 2500</div>
+                    <div class="col-6">
+                      <i class="fas fa-car"></i> Garage: 2</div>
+                  </div>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                    <div class="col-6">
+                      <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                  </div>
+                  <hr>
+                  <div class="row py-2 text-secondary">
+                    <div class="col-6">
+                      <i class="fas fa-user"></i> Manzi Gustave</div>
+                  </div>
+                  <div class="row text-secondary pb-2">
+                    <div class="col-6">
+                      <i class="fas fa-clock"></i> 3 days ago</div>
+                  </div>
+                  <hr>
+                  <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+        <div class="col-md-12">
+          <p>No Listing Available</p>
+        </div>
+        {% endif %}
+        
         <!-- Listing 1 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">

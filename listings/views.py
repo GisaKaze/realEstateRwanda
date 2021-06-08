@@ -6,10 +6,11 @@ def index(request):
     listings = Listing.objects.all()
     
     context = {
-        'listings': 'listings'
+        'listings': listings
     }
+
     
-    return render(request, 'listings/listings.html')
+    return render(request, 'listings/listings.html', context)
 
 
 def listing(request):
