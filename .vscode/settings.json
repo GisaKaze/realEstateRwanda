@@ -1,4 +1,5 @@
 {
     "terminal.integrated.altClickMovesCursor": false,
-    "terminal.integrated.allowMnemonics": true
+    "terminal.integrated.allowMnemonics": true,
+    "python.pythonPath": "c:\\Users\\Fredson\\Documents\\THINGZ\\Workspaces\\Python\\Project\\btre_project\\venv\\Scripts\\python.exe"
 }
