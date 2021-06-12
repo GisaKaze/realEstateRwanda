@@ -94,6 +94,14 @@
     <div class="container">
       <h3 class="text-center mb-3">Our Top Rated Properties</h3>
       <div class="row">
+        {% if listings %}
+
+        {% else%}
+          <div class="col-md-12">
+            <p>No Listing Available</p>
+          </div>
+        {% endif %}
+
         <!-- Listing 1 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
