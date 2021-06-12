@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
-
+ 
 {% block content %}
 
 <section id="showcase-inner" class="py-5 text-white">
@@ -42,16 +42,20 @@
           commodi id libero eveniet harum perferendis laborum molestias quia.</p>
       </div>
       <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="{% static 'img/realtors/fredson.jpg' %}" alt="Seller of the month">
-          <div class="card-body">
-            <h5 class="card-title">Seller Of The Month</h5>
-            <h6 class="text-secondary">Gisa Fredson</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nesciunt amet, illo itaque similique repellat.
-              content.
-            </p>
-          </div>
-        </div>
+        {% if mvp_realtors %}
+            {% for realtor in mvp_realtors %}
+              <div class="card">
+                <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
+                <div class="card-body">
+                  <h5 class="card-title">Seller Of The Month</h5>
+                  <h6 class="text-primary">{{ realtor.name }}</h6>
+                  <p class="card-text">
+                    {{ realtor.description}} 
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
       </div>
     </div>
   </div>
@@ -70,39 +74,26 @@
   <div class="container">
     <h2 class="text-center">Our Team</h2>
     <div class="row text-center">
-      <div class="col-md-4">
-        <img src="../../static/img/realtors/fredson.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Gisa Fredson</h4>
-        <p class="text-success">
-          <i class="fas fa-award text-success mb-3"></i> Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (555)-555-5555</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> fredson@realestaterwanda.rw</p>
-      </div>
+      {% if realtors %}
+        {% for realtor in realtors %}
+          <div class="col-md-4">
+            <img src="{{ realtor.photo.url }}" alt="" class="rounded-circle mb-3">
+            <h4>{{ realtor.name }}</h4>
+            <p class="text-success">
+              <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+            <hr>
+            <p>
+              <i class="fas fa-phone"></i> {{ realtor.phone }}</p>
+            <p>
+              <i class="fas fa-envelope-open"></i>{{ realtor.email }}</p>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="col-md-12">
+          <p>No Realtor Available</p>
+        </div>
+      {% endif %}
 
-      <div class="col-md-4">
-        <img src="static/img/realtors/fredson.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Manzi Gustave</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (444)-444-4444</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> mgustave@realestaterwanda.rw</p>
-      </div>
-
-      <div class="col-md-4">
-        <img src="static/img/realtors/fredson.jpg" alt="" class="rounded-circle mb-3">
-        <h4>Kobz Shallon</h4>
-        <p class="text-success">Realtor</p>
-        <hr>
-        <p>
-          <i class="fas fa-phone"></i> (333)-333-3333</p>
-        <p>
-          <i class="fas fa-envelope-open"></i> kobz@realestaterwanda.rw</p>
-      </div>
     </div>
   </div>
 </section>
