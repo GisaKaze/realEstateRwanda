@@ -60,11 +60,21 @@ img {
     left: 0;
     min-height: 100%;
     width: 100%;
-    background: #10284e;
-
+    background: url('../../static/img/2.jpg');
   }
   #showcase-inner.showcase-search {
     min-height: 270px; }
+  
+    .img{
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      overflow: auto;
+      width: 100%;
+      background: rgb(16, 40, 78, 0.5);
+      min-height: 320px; 
+    }
 
 #work {
   padding: 6rem 0; }
