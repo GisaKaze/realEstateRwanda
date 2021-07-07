@@ -14,7 +14,7 @@
             We are passionate about creating an incredible client experience and determined to get you the very best results!
           </p>
           <div class="search">
-            <form action="search.html">
+            <form action="{% url 'search' %}">
               <!-- Form Row 1 -->
               <div class="form-row">
                 <div class="col-md-4 mb-3">
@@ -28,23 +28,12 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                  <label class="sr-only">State</label>
-                  <select name="state" class="form-control">
+                  <label class="sr-only">District</label>
+                  <select name="district" class="form-control">
                     <option selected="true" disabled="disabled">Districts</option>
-                    <option value="KCK">Kicukiro</option>
-                    <option value="GSB">Gasabo</option>
-                    <option value="NYR">Nyarugenge</option>
-                    <option value="NYG">Nyagatare</option>
-                    <option value="KYZ">Kayonza</option>
-                    <option value="RMG">Rwamagana</option>
-                    <option value="BUG">Bugesera</option>
-                    <option value="HUY">Huye</option>
-                    <option value="NYZ">Nyanza</option>
-                    <option value="KMY">Kamonyi</option>
-                    <option value="RUS">Rusizi</option>
-                    <option value="RUB">Rubavu</option>
-                    <option value="KRG">Karongi</option>
-                    <option value="MSZ">Musanze</option>
+                    {% for key,value in district_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
                   </select>
                 </div>
               </div>
@@ -54,31 +43,17 @@
                   <label class="sr-only">Bedrooms</label>
                   <select name="bedrooms" class="form-control">
                     <option selected="true" disabled="disabled">Bedrooms (All)</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                    {% for key,value in bedroom_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
                   </select>
                 </div>
                 <div class="col-md-6 mb-3">
                   <select name="price" class="form-control" id="type">
                     <option selected="true" disabled="disabled">Max Price (Any)</option>
-                    <option value="100000"100,000 Frw</option>
-                    <option value="200000">200,000 Frw</option>
-                    <option value="300000">300,000 Frw</option>
-                    <option value="400000">400,000 Frw</option>
-                    <option value="500000">500,000 Frw</option>
-                    <option value="600000">600,000 Frw</option>
-                    <option value="700000">700,000 Frw</option>
-                    <option value="800000">800,000 Frw</option>
-                    <option value="900000">900,000 Frw</option>
-                    <option value="1000000">1M+ Frw</option>
+                    {% for key,value in price_choices.items %}
+                      <option value="{{ key }}">{{ value }}</option>
+                    {% endfor %}
                   </select>
                 </div>
               </div>
