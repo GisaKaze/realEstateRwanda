@@ -15,9 +15,6 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        # print('SUBMITTED FOR VERIFICATION')
-        # return redirect('login')
-        #Login User
         return 
     return render(request, 'accounts/login.html')
 
