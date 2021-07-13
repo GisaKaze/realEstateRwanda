@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 
 def register(request):
@@ -6,7 +7,8 @@ def register(request):
         # print('SUBMITTED REGISTRATION')
         # return redirect('register')
         #Register User
-        return
+        messages.error(request, 'Testing error message')
+        return redirect('register')
     else:
         return render(request, 'accounts/register.html')
 
