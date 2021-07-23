@@ -43,7 +43,7 @@
           {% if user.is_authenticated %}
             <li
               {% if 'dashboard' in request.path %}
-              class="nav-item active mr-3"
+                class="nav-item active mr-3"
               {% else %}
                 class="nav-item mr-3"
               {% endif %} 
@@ -54,7 +54,9 @@
             </li>
             <li class="nav-item mr-3">
               <a href="javascript:{document.getElementById('logout').submit()}"
-              class="nav-link"><i class="fas fa-sign-out-alt">Logout</i></a>
+              class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>Logout
+              </a>
             <form action="{% url 'logout' %}" method="POST" id="logout">
               {% csrf_token %}
               <input type="hidden">
@@ -63,7 +65,7 @@
           {% else %}
             <li
               {% if 'register' in request.path %}
-              class="nav-item active mr-3"
+                class="nav-item active mr-3"
               {% else %}
                 class="nav-item mr-3"
               {% endif %} 
@@ -73,7 +75,7 @@
             </li>
             <li
               {% if 'login' in request.path %}
-              class="nav-item active mr-3"
+                class="nav-item active mr-3"
               {% else %}
                 class="nav-item mr-3"
               {% endif %}
