@@ -9,7 +9,7 @@
     <div class="container text-center">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Browse Our Properties {{ context}}</h1>
+          <h1 class="display-4">Browse Our Properties {{ context }}</h1>
           <p class="lead">
             We are passionate about creating an incredible client experience and determined to get you the very best results!
           </p>
@@ -57,7 +57,7 @@
                   <hr>
                   <div class="row py-2 text-primary">
                     <div class="col-6">
-                      <i class="fas fa-th-large"></i> Sqft: {{ listing.sqft }}</div>
+                      <i class="fas fa-landmark"></i> Sqft: {{ listing.sqft }}</div>
                     <div class="col-6">
                       <i class="fas fa-car"></i> Garage: {{ listing.garage }}</div>
                   </div>
@@ -69,8 +69,10 @@
                   </div>
                   <hr>
                   <div class="row py-2 text-primary">
-                    <div class="col-6">
-                      <i class="fas fa-user"></i> {{ listing.realtor }}</div>
+                    <div class="col-8">
+                      <i class="fas fa-user"></i>
+                      <a href="{% url 'listing' listing.id %}"> {{ listing.realtor }} </a>
+                    </div>
                   </div>
                   <div class="row text-primary pb-2">
                     <div class="col-8">

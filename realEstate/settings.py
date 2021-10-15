@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'realEstate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btredb',
+        'NAME': 'realestate',
         'USER': 'postgres',
         'PASSWORD': 'fredson45@800G',
         'HOST': 'localhost'
@@ -149,5 +149,5 @@ MESSAGE_TAGS = {
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'fredson.coder@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'seth45@800G'
 EMAIL_USE_TLS = True

@@ -10,7 +10,7 @@
     <div class="container text-center">
       <div class="home-search p-5">
         <div class="overlay p-5">
-          <h1 class="display-4 mb-4">
+          <h1 class="display-4 mb-4 font-weight-bolder">
             Find Your Dream Home
           </h1>
           <p class="lead">
@@ -85,7 +85,7 @@
               <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-primary text-white">{{ listing.price | intcomma }} Frw</span>
+                    <span class="badge badge-primary text-white">{{ listing.price | intword }} Frw</span>
                   </h2>
                 </div>
                 <div class="card-body">
@@ -109,7 +109,7 @@
                   </div>
                   <hr>
                   <div class="row py-2 text-primary">
-                    <div class="col-6">
+                    <div class="col-8">
                       <i class="fas fa-user"></i> {{ listing.realtor }}</div>
                   </div>
                   <div class="row text-primary pb-2">
