@@ -1,32 +1,64 @@
 #header {
-    height: 50px;
-    background: #10284e;
-    color: #fff;
+  height: 50px;
+  background: black;
+  color: #fff;
 }
 
-#branding h1{
-    color: #fff;
+#branding h1 {
+  color: #fff;
 }
 
 a:link,
-a:visited{
-    color: #10284e;
+a:visited {
+  color: black;
 }
 
-div.breadcrumbs{
-    background: #30caa0;
-    color:#10284e;
+div.breadcrumbs {
+  background: black;
+  color: black;
 }
 
-div.breadcrumbs a{
-    color: #333;
+div.breadcrumbs a {
+  color: #333;
 }
 
-.module h2, .module caption, .online-group h2{
-    color: #30caa0;
+.module h2,
+.module caption,
+.online-group h2 {
+  color: black;
 }
 
-.button, input[type=submit], input[type=button], submit-row input, a.button{
-    background: #10284e;
-    color: #fff;
+.button,
+input[type="submit"],
+input[type="button"],
+submit-row input,
+a.button {
+  background: black;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  #head {
+    font-size: 2px;
+    color: re;
+  }
+}
+
+@media (max-width: 768px) {
+    #header{
+        /* background: black; */
+    }
+    #head {
+    font-size: smaller;
+    text-align: center;
+  }
+  #header .brand_img {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #head {
+  }
 }
