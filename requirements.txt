@@ -29,7 +29,7 @@ python-dateutil==2.8.1
 python-time==0.3.0
 pyttsx3==2.90
 pytz==2020.5
-pywin32==301
+# pywin32==301
 qrcode==6.1
 qrtools==0.0.1
 requests==2.25.1
