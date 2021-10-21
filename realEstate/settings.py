@@ -20,12 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+
 SECRET_KEY = '_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000','realestate-rw.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1:8000','realestate-rw.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'realestate-rw.herokuapp.com']
 
 
 # Application definition
@@ -68,7 +72,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',   
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
