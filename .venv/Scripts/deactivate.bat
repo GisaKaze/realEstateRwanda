@@ -1,5 +1,6 @@
 @echo off
 
+set SECRET_KEY=
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
