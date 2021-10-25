@@ -1,6 +1,6 @@
 @echo off
 
-set "SECRET_KEY=_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271"
+set SECRET_KEY=_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271
 
 rem This file is UTF-8 encoded, so we need to update the current code page while executing it
 for /f "tokens=2 delims=:." %%a in ('"%SystemRoot%\System32\chcp.com"') do (
