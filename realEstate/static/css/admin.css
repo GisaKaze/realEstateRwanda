@@ -15,50 +15,24 @@ a:visited {
 
 div.breadcrumbs {
   background: black;
-  color: black;
+  color: #ffffff;
 }
 
 div.breadcrumbs a {
-  color: #333;
+  color: rgba(228, 228, 228, 0.705);
 }
 
 .module h2,
 .module caption,
-.online-group h2 {
-  color: black;
+.inline-group h2 {
+  background: #000000;
 }
 
 .button,
 input[type="submit"],
 input[type="button"],
-submit-row input,
+.submit-row input,
 a.button {
-  background: black;
+  background: #000000;
   color: #fff;
-}
-
-@media (max-width: 991px) {
-  #head {
-    font-size: 2px;
-    color: re;
-  }
-}
-
-@media (max-width: 768px) {
-    #header{
-        /* background: black; */
-    }
-    #head {
-    font-size: smaller;
-    text-align: center;
-  }
-  #header .brand_img {
-    width: auto;
-    height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  #head {
-  }
 }

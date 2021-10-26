@@ -20,7 +20,7 @@ img {
 }
 
 #showcase {
-  background: url(../img/showcase.jpg) no-repeat center top fixed;
+  background: url(../img/sky-scrapper.png) no-repeat center top fixed;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.466);
   position: relative;
   min-height: 650px;
