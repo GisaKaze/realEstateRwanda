@@ -25,18 +25,36 @@ price_choices = {
 }
 
 district_choices = {
-    'KCK': 'Kicukiro',
-    'GSB': 'Gasabo',
-    'NYR': 'Nyarugenge',
-    'NYG': 'Nyagatare',
-    'KYZ': 'Kayonza',
-    'RMG': 'Rwamagana',
-    'BUG': 'Bugesera',
-    'HUY': 'Huye',
-    'NYZ': 'Nyanza',
-    'KMY': 'Kamonyi',
-    'RUS': 'Rusizi',
-    'RBV': 'Rubavu',
-    'KRG': 'Karongi',
-    'MSZ': 'Musanze',
+    'Kicukiro': 'Kicukiro',
+    'Gasabo': 'Gasabo',
+    'Nyarugenge': 'Nyarugenge',
+    'Nyagatare': 'Nyagatare',
+    'Rwamagana': 'Rwamagana',
+    'Kayonza': 'Kayonza',
+    'Bugesera': 'Bugesera',
+    'Huye': 'Huye',
+    'Nyanza': 'Nyanza',
+    'Kamonyi': 'Kamonyi',
+    'Rusizi': 'Rusizi',
+    'Rubavu': 'Rubavu',
+    'Karongi': 'Karongi',
+    'Musanze': 'Musanze',
+}
+
+
+city_choices = {
+    'Kigali': 'Kigali',
+    'Bugesera': 'Bugesera',
+    'Nyagatare': 'Nyagatare',
+    'Rwamagana': 'Rwamagana',
+    'Kayonza': 'Kayonza',
+    'Bugesera': 'Bugesera',
+    'Huye': 'Huye',
+    'Nyanza': 'Nyanza',
+    'Kamonyi': 'Kamonyi',
+    'Rusizi': 'Rusizi',
+    'Rubavu': 'Rubavu',
+    'Karongi': 'Karongi',
+    'Musanze': 'Musanze',
+    'Muhanga': 'Muhanga'
 }

@@ -4405,7 +4405,8 @@ button.bg-dark:focus {
   border-color: #fff !important; }
 
 .rounded {
-  border-radius: 0.25rem !important; }
+  border-radius: 0.25rem !important;
+}
 
 .rounded-top {
   border-top-left-radius: 0.25rem !important;
