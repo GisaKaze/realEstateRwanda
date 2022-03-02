@@ -14,6 +14,7 @@ Django==3.1.5
 django-livereload-server==0.3.2
 filelock==3.6.0
 gunicorn==20.1.0
+heroku==0.1.4
 idna==2.10
 Jinja2==2.11.3
 MarkupSafe==1.1.1
@@ -23,11 +24,11 @@ platformdirs==2.4.0
 psycopg2-binary==2.9.3
 pypiwin32==223
 pytesseract==0.3.7
-python-dateutil==2.8.1
+python-dateutil==1.5
 python-time==0.3.0
 pyttsx3==2.90
 pytz==2020.5
-# pywin32
+pywin32==303
 qrcode==6.1
 qrtools==0.0.1
 requests==2.25.1
