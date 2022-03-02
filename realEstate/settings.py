@@ -35,7 +35,7 @@ DEBUG = False
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'realestate-rw.herokuapp.com']
 # New to deploy
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dream-realty.herokuapp.com']
 
 
 # Application definition
