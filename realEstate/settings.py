@@ -28,10 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+# New to deploy
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'realestate-rw.herokuapp.com']
+# New to deploy
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 
 # Application definition
@@ -54,7 +58,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.runserver_nostatic',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -62,10 +66,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript',   
+    'livereload.middleware.LiveReloadScript',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'realEstate.urls'
 
@@ -162,3 +165,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'fredson.coder@gmail.com'
 EMAIL_HOST_PASSWORD = 'seth45@800G'
 EMAIL_USE_TLS = True
+
+
+# New to deploy
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

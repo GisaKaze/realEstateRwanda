@@ -1,1 +1,1 @@
-web: gunicorn realEstate.wsgi
+"web: gunicorn realestate.wsgi" 
