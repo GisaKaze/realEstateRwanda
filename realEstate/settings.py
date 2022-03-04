@@ -23,19 +23,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY = os.environ.get('SECRET_KEY')
 
-SECRET_KEY = '_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271'
+##############################################
+# Add new deploy
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = False
+##############################################
+
+
+# SECRET_KEY = '_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271'
+# DEBUG = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# New to deploy
-DEBUG = False
 
-# ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'realestate-rw.herokuapp.com']
+
+############################################################################################
 # New to deploy
-ALLOWED_HOSTS = ['127.0.0.1', 'dream-realty.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'dream-realty.herokuapp.com']
+############################################################################################
 
 
 # Application definition
@@ -149,11 +154,11 @@ STATICFILES_DIRS = [
 ]
 
 
-# Mdedia Folder Settings
+# Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Messegages
+# Messages
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -162,8 +167,13 @@ MESSAGE_TAGS = {
 # Email configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'fredson.coder@gmail.com'
-EMAIL_HOST_PASSWORD = 'seth45@800G'
+# EMAIL_HOST_USER = 'fredson.coder@gmail.com'
+# EMAIL_HOST_PASSWORD = 'seth45@800G'
+
+# Add new deploy
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
 EMAIL_USE_TLS = True
 
 
