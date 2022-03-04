@@ -21,14 +21,15 @@ MarkupSafe==1.1.1
 Pillow==9.0.1
 pipenv==2020.11.15
 platformdirs==2.4.0
+portalocker==2.4.0
 psycopg2-binary==2.9.3
-# pypiwin32==223
+pypiwin32==223
 pytesseract==0.3.7
-# python-dateutil
+python-dateutil==1.5
 python-time==0.3.0
 pyttsx3==2.90
 pytz==2020.5
-# pywin32==303
+pywin32==303
 qrcode==6.1
 qrtools==0.0.1
 requests==2.25.1
@@ -44,4 +45,5 @@ tzdata==2021.5
 urllib3==1.26.2
 virtualenv==20.3.1
 virtualenv-clone==0.5.4
+waitress==2.0.0
 whitenoise==5.3.0
