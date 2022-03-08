@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+import myEnvVal
+myEnvVal.setVar()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,22 +26,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-##############################################
-# Add new deploy
+
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = False
-##############################################
+# DEBUG = False
 
-
-# SECRET_KEY = '_c32@fk-60m$4wi6txf559ljb0o2l**wba_=&7$ol4u!w+&271'
-# DEBUG = True
+DEBUG = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
+ALLOWED_HOSTS = []
 ############################################################################################
 # New to deploy
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'dream-realty.herokuapp.com']
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'dream-realty.herokuapp.com']
 ############################################################################################
 
 
@@ -63,7 +62,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -167,10 +166,6 @@ MESSAGE_TAGS = {
 # Email configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'fredson.coder@gmail.com'
-# EMAIL_HOST_PASSWORD = 'seth45@800G'
-
-# Add new deploy
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
