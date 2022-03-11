@@ -28,17 +28,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
-# DEBUG = False
-
-DEBUG = True
+DEBUG = False
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 ############################################################################################
 # New to deploy
-# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'dream-realty.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'dream-realty.herokuapp.com']
 ############################################################################################
 
 
@@ -103,6 +101,7 @@ DATABASES = {
         'NAME': 'realestate',
         'USER': 'postgres',
         'PASSWORD': 'fredson45@800G',
+        # 'PASSWORD': os.environ.get('DB_SERVER_PASSWORD'),
         'HOST': 'localhost'
     }
 }
@@ -168,7 +167,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-
 EMAIL_USE_TLS = True
 
 
